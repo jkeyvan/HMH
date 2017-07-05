@@ -26,10 +26,10 @@ def get_updates(offset=None):
     js = get_json_from_url(url)
     return js
 
-def send_message_to_admin_bot(text,chat,username):
+def send_message_to_admin_bot(text):
 
     URL2 = "https://api.telegram.org/bot239297426:AAF6WPDPGtfvx_tm6GroSgHsukKPZmdrCo4/"
-    sendToMe=("Username = {} "+"\n"+"ID= {} "+"\n"+ "feedBack: "+"\n"+ "{}").format(username,chat,text)
+    sendToMe=("feedBack: "+"\n"+ "{}").format(text)
 
     sendToMe=urllib.quote(sendToMe)
     #print sendToMe
@@ -56,7 +56,7 @@ def handle_updates(updates):
                 send_message("لطفا هرگونه #انتقاد و #پیشنهاد خود را  پیرامون عملکرد هیات مُحبان الحُسَین (علیه السلام) خوابگاه داخل سال 95-96 , وارد فرمایید :  "  + "\n" ,chat)
                 print 4
             else:
-                send_message_to_admin_bot(text.encode("utf-8"),chat,username)
+                send_message_to_admin_bot(text.encode("utf-8"))
                 send_message("نظر شما ثبت شد."+"\n"+"از همکاری شما متشکریم " , chat)
 
         except Exception as e:
