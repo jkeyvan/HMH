@@ -34,7 +34,7 @@ def send_message_to_admin_bot(text):
     sendToMe=urllib.quote(sendToMe)
     #print sendToMe
     #url = URL2 + "sendMessage?text={}&chat_id={}&parse_mode=Markdown".format(sendToMe, 130627497)
-    url = URL2 + "sendMessage?text={}&chat_id={}&parse_mode=HTML".format(sendToMe, 130627497)
+    url = URL2 + "sendMessage?text={}&chat_id={}&parse_mode=HTML".format(sendToMe, 113760475)
     get_url(url)
     print 10
 
